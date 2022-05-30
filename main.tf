@@ -22,7 +22,7 @@ resource "aws_instance" "tejasEc2" {
   availability_zone = var.ec2AZ
   vpc_security_group_ids = ["sg-0efc02319e1096486"]
   key_name = "tjkey"
-  count = 1
+  count = 2
   tags = {
     "Name" = local.tName
     "Owner" = local.tOwner
