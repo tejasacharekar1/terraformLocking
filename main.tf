@@ -28,13 +28,13 @@ resource "aws_instance" "tejasEc2" {
     "Owner" = local.tOwner
     "Purpose" = local.tPurpose
   }
-#   user_data = <<-EOF
-#   #! /bin/bash
-#   sudo yum update -y
-#   sudo yum upgrade -y
-#   sudo yum install httpd -y
-#   sudo systemctl enable httpd
-#   sudo systemctl start httpd
-#   echo "Welcome to my webpage" > /var/www/html/index.html
-#   EOF
+  user_data = <<-EOF
+  #! /bin/bash
+  sudo yum update -y
+  sudo yum upgrade -y
+  sudo yum install httpd -y
+  sudo systemctl enable httpd
+  sudo systemctl start httpd
+  echo "Welcome to my webpage" > /var/www/html/index.html
+  EOF
 }
